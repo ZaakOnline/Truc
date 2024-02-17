@@ -1,0 +1,101 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    align-items: flex-start; /* Aligner les éléments en haut du conteneur */
+    transform: scale(1.5); /* Agrandir l'interface de 100% (1x) */
+    transform-origin: top left; /* Définir l'origine de la transformation à partir du coin supérieur gauche */
+}
+
+.input-container {
+    display: flex;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background-color: #e9e9e9; /* Couleur de fond pour le continuum */
+}
+
+input {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    outline: none;
+    background-color: #e9e9e9;
+}
+
+button {
+    padding: 15px 40px;
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-item {
+    background-color: #f0f0f0;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.status {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 2px solid #4caf50;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.status::before {
+    content: '✔'; /* Utilisation du caractère de coche (check mark) */
+    font-size: 18px; /* Taille du check mark */
+    color: #ffffff; /* Couleur du check mark (blanc) */
+    display: block;
+    text-align: center;
+    line-height: 25px;
+}
+
+.completed .status {
+    background-color: #4caf50;
+}
+
+.completed span {
+    text-decoration: none;
+    color: #808080;
+}
+
+.deleteBtn {
+    color: #000000;
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.deleteBtn:focus {
+    outline: none; /* Supprimer l'effet de focus si jamais il y en a un */
+}
